@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		FB326D811D37BA2A00D9E87D /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FB326D821D37BA2A00D9E87D /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				FB326D871D37BC6E00D9E87D /* MultiPlatform Build */,
+			);
+			dependencies = (
+				FB783FBF1D53423C00813530 /* PBXTargetDependency */,
+				FB326D861D37BAC900D9E87D /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		FB19AEEF1D543BD5009E8401 /* ViewTools.h in Headers */ = {isa = PBXBuildFile; fileRef = FB19AEEC1D543BD5009E8401 /* ViewTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB19AEF01D543BD5009E8401 /* ViewTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB19AEED1D543BD5009E8401 /* ViewTools.m */; };
+		FB19AEF11D543BD5009E8401 /* ViewToolsConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = FB19AEEE1D543BD5009E8401 /* ViewToolsConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB19AEF21D543BDD009E8401 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB19AEE81D543BD5009E8401 /* arrow@2x.png */; };
+		FB19AEF31D543BDF009E8401 /* box_textField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB19AEE91D543BD5009E8401 /* box_textField@2x.png */; };
+		FB19AEF41D543BE2009E8401 /* gray_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB19AEEA1D543BD5009E8401 /* gray_btn@2x.png */; };
+		FB19AEF51D543BE4009E8401 /* red_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB19AEEB1D543BD5009E8401 /* red_btn@2x.png */; };
+		FB49A39E1D50825700BE6AA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB49A39D1D50825700BE6AA4 /* Foundation.framework */; };
+		FB60E51E1D2E2F8C00DC1B6C /* RWUIControls.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB60E51D1D2E2F8C00DC1B6C /* RWUIControls.h */; };
+		FB60E5271D2E34EA00DC1B6C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB60E5261D2E34EA00DC1B6C /* UIKit.framework */; };
+		FB83F6331D54338E0015D3DE /* ContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = FB83F6301D54338E0015D3DE /* ContainerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB83F6341D54338E0015D3DE /* ContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB83F6311D54338E0015D3DE /* ContainerView.m */; };
+		FB83F6351D54338E0015D3DE /* ContainerViewConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = FB83F6321D54338E0015D3DE /* ContainerViewConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB91D7031D363D3D0051403A /* UITextFieldTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FB91D6FE1D363D3D0051403A /* UITextFieldTools.m */; };
+		FB95251A1D3649D9008FE0C2 /* RWUIControls.h in Headers */ = {isa = PBXBuildFile; fileRef = FB60E51D1D2E2F8C00DC1B6C /* RWUIControls.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB95251C1D3649E0008FE0C2 /* UITextFieldTools.h in Headers */ = {isa = PBXBuildFile; fileRef = FB91D6FD1D363D3D0051403A /* UITextFieldTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB326D851D37BAC900D9E87D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB60E5121D2E2F8C00DC1B6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB60E5191D2E2F8C00DC1B6C;
+			remoteInfo = RWUIControls;
+		};
+		FB783FBE1D53423C00813530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB60E5121D2E2F8C00DC1B6C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB783FB71D5341DA00813530;
+			remoteInfo = RWUIControlsResources;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB60E5181D2E2F8C00DC1B6C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				FB60E51E1D2E2F8C00DC1B6C /* RWUIControls.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FB19AEE81D543BD5009E8401 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		FB19AEE91D543BD5009E8401 /* box_textField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "box_textField@2x.png"; sourceTree = "<group>"; };
+		FB19AEEA1D543BD5009E8401 /* gray_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray_btn@2x.png"; sourceTree = "<group>"; };
+		FB19AEEB1D543BD5009E8401 /* red_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_btn@2x.png"; sourceTree = "<group>"; };
+		FB19AEEC1D543BD5009E8401 /* ViewTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewTools.h; sourceTree = "<group>"; };
+		FB19AEED1D543BD5009E8401 /* ViewTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewTools.m; sourceTree = "<group>"; };
+		FB19AEEE1D543BD5009E8401 /* ViewToolsConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewToolsConstant.h; sourceTree = "<group>"; };
+		FB49A39D1D50825700BE6AA4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB60E51A1D2E2F8C00DC1B6C /* libRWUIControls.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRWUIControls.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB60E51D1D2E2F8C00DC1B6C /* RWUIControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWUIControls.h; sourceTree = "<group>"; };
+		FB60E5261D2E34EA00DC1B6C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB783F9E1D53391D00813530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB783FB01D53418000813530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB783FB81D5341DA00813530 /* RWUIControls.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RWUIControls.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB783FBA1D5341DA00813530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB83F6301D54338E0015D3DE /* ContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerView.h; sourceTree = "<group>"; };
+		FB83F6311D54338E0015D3DE /* ContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerView.m; sourceTree = "<group>"; };
+		FB83F6321D54338E0015D3DE /* ContainerViewConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerViewConstant.h; sourceTree = "<group>"; };
+		FB91D6FD1D363D3D0051403A /* UITextFieldTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITextFieldTools.h; sourceTree = "<group>"; };
+		FB91D6FE1D363D3D0051403A /* UITextFieldTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldTools.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB60E5171D2E2F8C00DC1B6C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB49A39E1D50825700BE6AA4 /* Foundation.framework in Frameworks */,
+				FB60E5271D2E34EA00DC1B6C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB783FB51D5341DA00813530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB19AEE71D543BD5009E8401 /* ViewToolsPics */ = {
+			isa = PBXGroup;
+			children = (
+				FB19AEE81D543BD5009E8401 /* arrow@2x.png */,
+				FB19AEE91D543BD5009E8401 /* box_textField@2x.png */,
+				FB19AEEA1D543BD5009E8401 /* gray_btn@2x.png */,
+				FB19AEEB1D543BD5009E8401 /* red_btn@2x.png */,
+				FB19AEEC1D543BD5009E8401 /* ViewTools.h */,
+				FB19AEED1D543BD5009E8401 /* ViewTools.m */,
+				FB19AEEE1D543BD5009E8401 /* ViewToolsConstant.h */,
+			);
+			path = ViewToolsPics;
+			sourceTree = "<group>";
+		};
+		FB60E5111D2E2F8C00DC1B6C = {
+			isa = PBXGroup;
+			children = (
+				FB49A39D1D50825700BE6AA4 /* Foundation.framework */,
+				FB60E5261D2E34EA00DC1B6C /* UIKit.framework */,
+				FB60E51C1D2E2F8C00DC1B6C /* RWUIControls */,
+				FB783F9D1D53391D00813530 /* RWUIControlsResources */,
+				FB783FAF1D53418000813530 /* RWUIControlsResources */,
+				FB783FB91D5341DA00813530 /* RWUIControlsResources */,
+				FB60E51B1D2E2F8C00DC1B6C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB60E51B1D2E2F8C00DC1B6C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB60E51A1D2E2F8C00DC1B6C /* libRWUIControls.a */,
+				FB783FB81D5341DA00813530 /* RWUIControls.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB60E51C1D2E2F8C00DC1B6C /* RWUIControls */ = {
+			isa = PBXGroup;
+			children = (
+				FB19AEE71D543BD5009E8401 /* ViewToolsPics */,
+				FB91D6FC1D363D3D0051403A /* ViewToolsClass */,
+				FB60E51D1D2E2F8C00DC1B6C /* RWUIControls.h */,
+			);
+			path = RWUIControls;
+			sourceTree = "<group>";
+		};
+		FB783F9D1D53391D00813530 /* RWUIControlsResources */ = {
+			isa = PBXGroup;
+			children = (
+				FB783F9E1D53391D00813530 /* Info.plist */,
+			);
+			path = RWUIControlsResources;
+			sourceTree = "<group>";
+		};
+		FB783FAF1D53418000813530 /* RWUIControlsResources */ = {
+			isa = PBXGroup;
+			children = (
+				FB783FB01D53418000813530 /* Info.plist */,
+			);
+			path = RWUIControlsResources;
+			sourceTree = "<group>";
+		};
+		FB783FB91D5341DA00813530 /* RWUIControlsResources */ = {
+			isa = PBXGroup;
+			children = (
+				FB783FBA1D5341DA00813530 /* Info.plist */,
+			);
+			path = RWUIControlsResources;
+			sourceTree = "<group>";
+		};
+		FB91D6FC1D363D3D0051403A /* ViewToolsClass */ = {
+			isa = PBXGroup;
+			children = (
+				FB83F6301D54338E0015D3DE /* ContainerView.h */,
+				FB83F6311D54338E0015D3DE /* ContainerView.m */,
+				FB83F6321D54338E0015D3DE /* ContainerViewConstant.h */,
+				FB91D6FD1D363D3D0051403A /* UITextFieldTools.h */,
+				FB91D6FE1D363D3D0051403A /* UITextFieldTools.m */,
+			);
+			path = ViewToolsClass;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FB9525191D3649CA008FE0C2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB95251A1D3649D9008FE0C2 /* RWUIControls.h in Headers */,
+				FB83F6331D54338E0015D3DE /* ContainerView.h in Headers */,
+				FB83F6351D54338E0015D3DE /* ContainerViewConstant.h in Headers */,
+				FB95251C1D3649E0008FE0C2 /* UITextFieldTools.h in Headers */,
+				FB19AEEF1D543BD5009E8401 /* ViewTools.h in Headers */,
+				FB19AEF11D543BD5009E8401 /* ViewToolsConstant.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		FB60E5191D2E2F8C00DC1B6C /* RWUIControls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB60E5231D2E2F8C00DC1B6C /* Build configuration list for PBXNativeTarget "RWUIControls" */;
+			buildPhases = (
+				FB60E5161D2E2F8C00DC1B6C /* Sources */,
+				FB60E5171D2E2F8C00DC1B6C /* Frameworks */,
+				FB60E5181D2E2F8C00DC1B6C /* CopyFiles */,
+				FB9525191D3649CA008FE0C2 /* Headers */,
+				FB326D801D3785EB00D9E87D /* Build Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RWUIControls;
+			productName = RWUIControls;
+			productReference = FB60E51A1D2E2F8C00DC1B6C /* libRWUIControls.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FB783FB71D5341DA00813530 /* RWUIControlsResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB783FBB1D5341DA00813530 /* Build configuration list for PBXNativeTarget "RWUIControlsResources" */;
+			buildPhases = (
+				FB783FB41D5341DA00813530 /* Sources */,
+				FB783FB51D5341DA00813530 /* Frameworks */,
+				FB783FB61D5341DA00813530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RWUIControlsResources;
+			productName = RWUIControlsResources;
+			productReference = FB783FB81D5341DA00813530 /* RWUIControls.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB60E5121D2E2F8C00DC1B6C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Coody;
+				TargetAttributes = {
+					FB326D811D37BA2A00D9E87D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FB60E5191D2E2F8C00DC1B6C = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FB783FB71D5341DA00813530 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = FB60E5151D2E2F8C00DC1B6C /* Build configuration list for PBXProject "RWUIControls" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB60E5111D2E2F8C00DC1B6C;
+			productRefGroup = FB60E51B1D2E2F8C00DC1B6C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB60E5191D2E2F8C00DC1B6C /* RWUIControls */,
+				FB326D811D37BA2A00D9E87D /* Framework */,
+				FB783FB71D5341DA00813530 /* RWUIControlsResources */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB783FB61D5341DA00813530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB19AEF41D543BE2009E8401 /* gray_btn@2x.png in Resources */,
+				FB19AEF51D543BE4009E8401 /* red_btn@2x.png in Resources */,
+				FB19AEF31D543BDF009E8401 /* box_textField@2x.png in Resources */,
+				FB19AEF21D543BDD009E8401 /* arrow@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FB326D801D3785EB00D9E87D /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "###\n# 用 set 觀察所有變數 (含環境變數與自訂變數)\n#   bash 可不只有環境變數喔，還有一些與 bash 操作介面有關的變數，以及使用者自己定義的變數存在的。 那麼這些變數如何觀察呢？這個時候就得要使用 set 這個指令了。 set 除了環境變數之外， 還會將其他在 bash 內的變數通通顯示出來哩！\n#\n#\nset -e\n\n# export： 自訂變數轉成環境變數（請上鳥哥的 linux 私房菜自己找資料）\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n# ln 是 link 的意思，可以用 man ln 找後面參數的意思\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n#########\n# This script first creates the Ooxx.framework/Versions/A/Headers directory before then creating the three symbolic links required for a framework:\n#\n# Versions/Current   =>  A\n# Headers            =>  Versions/Current/Headers\n# Ooxx               =>  Versions/Current/Ooxx\n#\n# Finally, the public header files copy into the Versions/A/Headers directory from the public headers path you specified before. The -a argument ensures the modified times don’t change as part of the copy, thereby preventing unnecessary rebuilds.\n#\n#########";
+		};
+		FB326D871D37BC6E00D9E87D /* MultiPlatform Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "MultiPlatform Build";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "############# 第一段 #############\nset -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\n## 記住目前是否有執行過？\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\n## 定義變數、library 名稱（libOoxx.a）、framework 位置\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\n#################################\n\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"\n\n# Copy the resources bundle to the user's desktop\nditto \"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.bundle\" \\\n\"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.bundle\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB60E5161D2E2F8C00DC1B6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB19AEF01D543BD5009E8401 /* ViewTools.m in Sources */,
+				FB83F6341D54338E0015D3DE /* ContainerView.m in Sources */,
+				FB91D7031D363D3D0051403A /* UITextFieldTools.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB783FB41D5341DA00813530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB326D861D37BAC900D9E87D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB60E5191D2E2F8C00DC1B6C /* RWUIControls */;
+			targetProxy = FB326D851D37BAC900D9E87D /* PBXContainerItemProxy */;
+		};
+		FB783FBF1D53423C00813530 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB783FB71D5341DA00813530 /* RWUIControlsResources */;
+			targetProxy = FB783FBE1D53423C00813530 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FB326D831D37BA2A00D9E87D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FB326D841D37BA2A00D9E87D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FB60E5211D2E2F8C00DC1B6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB60E5221D2E2F8C00DC1B6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB60E5241D2E2F8C00DC1B6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		FB60E5251D2E2F8C00DC1B6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEAD_CODE_STRIPPING = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		FB783FBC1D5341DA00813530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = NO;
+				INFOPLIST_FILE = RWUIControlsResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.RWUIControlsResources";
+				PRODUCT_NAME = RWUIControls;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		FB783FBD1D5341DA00813530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = NO;
+				INFOPLIST_FILE = RWUIControlsResources/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.RWUIControlsResources";
+				PRODUCT_NAME = RWUIControls;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB326D821D37BA2A00D9E87D /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB326D831D37BA2A00D9E87D /* Debug */,
+				FB326D841D37BA2A00D9E87D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB60E5151D2E2F8C00DC1B6C /* Build configuration list for PBXProject "RWUIControls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB60E5211D2E2F8C00DC1B6C /* Debug */,
+				FB60E5221D2E2F8C00DC1B6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB60E5231D2E2F8C00DC1B6C /* Build configuration list for PBXNativeTarget "RWUIControls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB60E5241D2E2F8C00DC1B6C /* Debug */,
+				FB60E5251D2E2F8C00DC1B6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB783FBB1D5341DA00813530 /* Build configuration list for PBXNativeTarget "RWUIControlsResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB783FBC1D5341DA00813530 /* Debug */,
+				FB783FBD1D5341DA00813530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB60E5121D2E2F8C00DC1B6C /* Project object */;
+}

@@ -1,0 +1,255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB1DEF201D2286D400E12FB0 /* teatStaticLibrary_01.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB1DEF1F1D2286D400E12FB0 /* teatStaticLibrary_01.h */; };
+		FB1DEF221D2286D400E12FB0 /* teatStaticLibrary_01.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1DEF211D2286D400E12FB0 /* teatStaticLibrary_01.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FB1DEF1A1D2286D400E12FB0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				FB1DEF201D2286D400E12FB0 /* teatStaticLibrary_01.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FB1DEF1C1D2286D400E12FB0 /* libteatStaticLibrary_01.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libteatStaticLibrary_01.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1DEF1F1D2286D400E12FB0 /* teatStaticLibrary_01.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = teatStaticLibrary_01.h; sourceTree = "<group>"; };
+		FB1DEF211D2286D400E12FB0 /* teatStaticLibrary_01.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = teatStaticLibrary_01.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB1DEF191D2286D400E12FB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB1DEF131D2286D400E12FB0 = {
+			isa = PBXGroup;
+			children = (
+				FB1DEF1E1D2286D400E12FB0 /* teatStaticLibrary_01 */,
+				FB1DEF1D1D2286D400E12FB0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB1DEF1D1D2286D400E12FB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB1DEF1C1D2286D400E12FB0 /* libteatStaticLibrary_01.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB1DEF1E1D2286D400E12FB0 /* teatStaticLibrary_01 */ = {
+			isa = PBXGroup;
+			children = (
+				FB1DEF1F1D2286D400E12FB0 /* teatStaticLibrary_01.h */,
+				FB1DEF211D2286D400E12FB0 /* teatStaticLibrary_01.m */,
+			);
+			path = teatStaticLibrary_01;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB1DEF1B1D2286D400E12FB0 /* teatStaticLibrary_01 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1DEF251D2286D400E12FB0 /* Build configuration list for PBXNativeTarget "teatStaticLibrary_01" */;
+			buildPhases = (
+				FB1DEF181D2286D400E12FB0 /* Sources */,
+				FB1DEF191D2286D400E12FB0 /* Frameworks */,
+				FB1DEF1A1D2286D400E12FB0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = teatStaticLibrary_01;
+			productName = teatStaticLibrary_01;
+			productReference = FB1DEF1C1D2286D400E12FB0 /* libteatStaticLibrary_01.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB1DEF141D2286D400E12FB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Coody;
+				TargetAttributes = {
+					FB1DEF1B1D2286D400E12FB0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = FB1DEF171D2286D400E12FB0 /* Build configuration list for PBXProject "teatStaticLibrary_01" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FB1DEF131D2286D400E12FB0;
+			productRefGroup = FB1DEF1D1D2286D400E12FB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB1DEF1B1D2286D400E12FB0 /* teatStaticLibrary_01 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB1DEF181D2286D400E12FB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1DEF221D2286D400E12FB0 /* teatStaticLibrary_01.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FB1DEF231D2286D400E12FB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB1DEF241D2286D400E12FB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB1DEF261D2286D400E12FB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		FB1DEF271D2286D400E12FB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB1DEF171D2286D400E12FB0 /* Build configuration list for PBXProject "teatStaticLibrary_01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1DEF231D2286D400E12FB0 /* Debug */,
+				FB1DEF241D2286D400E12FB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB1DEF251D2286D400E12FB0 /* Build configuration list for PBXNativeTarget "teatStaticLibrary_01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1DEF261D2286D400E12FB0 /* Debug */,
+				FB1DEF271D2286D400E12FB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB1DEF141D2286D400E12FB0 /* Project object */;
+}
