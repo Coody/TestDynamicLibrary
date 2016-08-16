@@ -36,6 +36,7 @@ PS: 內部還可以相關連到很多文章，在這裡不再補連結了。
 1. Ooxx V1,V2 產生 ooxx 的動態 library 如何產生？
 2. Ooxx V1,V2 可載入動態 library 並且可以 work。
 3. Ooxx V1,V2 可使用下載的方式，下載動態 library 並起可以加入 bundle 、並且可以 work。
+PS: Ooxx 為內部專案，不再詳細寫。
 
 
 # 第 3 階段（?）
