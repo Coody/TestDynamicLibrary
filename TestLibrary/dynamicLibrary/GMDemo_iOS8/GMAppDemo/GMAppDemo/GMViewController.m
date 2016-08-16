@@ -27,17 +27,26 @@
 {
 //    if ([GMFrameworkLoader loadFrameworkWithCString:"/Users/hanwei/work/GMDemo/GMDylibDemo/OutFramework/GMDylibDemo.framework/GMDylibDemo"])
 //    if ([GMFrameworkLoader loadFrameworkWithBundlePath:@"/Users/hanwei/work/GMDemo/GMDylibDemo/OutFramework/GMDylibDemo.framework"])
-    if ([GMFrameworkLoader loadFramework])
-    {
-        [self loadDestinationClass];
-        if (delegate){
-            [self setDelegate:delegate];
-        }
-        return self;
+    
+    // 改成由外面先 loadFramework
+    [self loadDestinationClass];
+    if (delegate){
+        [self setDelegate:delegate];
+        
     }
-    else{
-        return nil;
-    }
+    return self;
+    
+//    if ([GMFrameworkLoader loadFramework])
+//    {
+//        [self loadDestinationClass];
+//        if (delegate){
+//            [self setDelegate:delegate];
+//        }
+//        return self;
+//    }
+//    else{
+//        return nil;
+//    }
 }
 
 - (void)loadDestinationClass
@@ -56,13 +65,14 @@
 
 - (void)setDelegate:(id)objDelegate
 {
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     SEL delegateSEL = @selector(setGMDelegate:);
 #pragma clang diagnostic pop
     
 // Both solutionA and solutionB work well.
-#if 1   // SolutionA
+#if 0   // SolutionA
     Method delegateMethod = class_getInstanceMethod(destGMViewControllerClass, delegateSEL);
     NSLog(@"%@ delegateMethod.", delegateMethod ? @"found" : @"missed");
     
@@ -88,22 +98,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -48,7 +48,18 @@
     [addNewBtn addTarget:self action:@selector(addNewButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:addNewBtn];
     
+    UIButton *backButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
+    [backButton setFrame:CGRectMake(0, 0, 60, 30)];
+    backButton.center = CGPointMake(addNewBtn.center.x, addNewBtn.center.y + 80);
+    [backButton setTitle:@"Back" forState:(UIControlStateNormal)];
+    [backButton addTarget:self action:@selector(pressedBackBtn:) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:backButton];
+    
     [self refresh];
+}
+
+-(void)dealloc{
+    NSLog(@"dealloc MyViewController");
 }
 
 - (void)refreshButtonClick:(id)sender
@@ -63,6 +74,13 @@
     [self.delegate addNewObject:[NSString stringWithFormat:@"%ld", (long)newObj]];
     
     [self refresh];
+}
+
+-(void)pressedBackBtn:(id)sender{
+    NSLog(@" old framework! ");
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 - (void)refresh

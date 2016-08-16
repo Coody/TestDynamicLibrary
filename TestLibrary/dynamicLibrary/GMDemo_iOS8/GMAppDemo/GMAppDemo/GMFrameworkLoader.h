@@ -19,4 +19,6 @@
 + (BOOL)loadFramework;
 + (BOOL)loadFrameworkWithBundlePath:(NSString *)bundlePath; // prefer
 
++ (BOOL)unloadFramework;
+
 @end

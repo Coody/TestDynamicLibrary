@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "686D61D019F66C1000AD1FE0"
-               BuildableName = "GMAppDemo.app"
-               BlueprintName = "GMAppDemo"
-               ReferencedContainer = "container:GMAppDemo.xcodeproj">
+               BlueprintIdentifier = "FB6096DA1D61AE8B00F63F65"
+               BuildableName = "ViewToolDylib.framework"
+               BlueprintName = "ViewToolDylib"
+               ReferencedContainer = "container:ViewToolDylib.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "686D61E919F66C1000AD1FE0"
-               BuildableName = "GMAppDemoTests.xctest"
-               BlueprintName = "GMAppDemoTests"
-               ReferencedContainer = "container:GMAppDemo.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "686D61D019F66C1000AD1FE0"
-            BuildableName = "GMAppDemo.app"
-            BlueprintName = "GMAppDemo"
-            ReferencedContainer = "container:GMAppDemo.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "686D61D019F66C1000AD1FE0"
-            BuildableName = "GMAppDemo.app"
-            BlueprintName = "GMAppDemo"
-            ReferencedContainer = "container:GMAppDemo.xcodeproj">
+            BlueprintIdentifier = "FB6096DA1D61AE8B00F63F65"
+            BuildableName = "ViewToolDylib.framework"
+            BlueprintName = "ViewToolDylib"
+            ReferencedContainer = "container:ViewToolDylib.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "686D61D019F66C1000AD1FE0"
-            BuildableName = "GMAppDemo.app"
-            BlueprintName = "GMAppDemo"
-            ReferencedContainer = "container:GMAppDemo.xcodeproj">
+            BlueprintIdentifier = "FB6096DA1D61AE8B00F63F65"
+            BuildableName = "ViewToolDylib.framework"
+            BlueprintName = "ViewToolDylib"
+            ReferencedContainer = "container:ViewToolDylib.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
@@ -97,14 +76,5 @@
    <ArchiveAction
       buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
-      <PreActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.SendEmailAction">
-            <ActionContent
-               title = "Send Email"
-               attachLogToEmail = "NO">
-            </ActionContent>
-         </ExecutionAction>
-      </PreActions>
    </ArchiveAction>
 </Scheme>
