@@ -32,7 +32,6 @@
     [self loadDestinationClass];
     if (delegate){
         [self setDelegate:delegate];
-        
     }
     return self;
     
@@ -89,6 +88,10 @@
         NSAssert(false, @"Not found setGMDelegate in %@", NSStringFromClass(destGMViewControllerClass));
     }
 #endif
+}
+
+-(void)dealloc{
+    NSLog(@"dealloc GMViewController");
 }
 
 - (UIViewController *)destinationViewController

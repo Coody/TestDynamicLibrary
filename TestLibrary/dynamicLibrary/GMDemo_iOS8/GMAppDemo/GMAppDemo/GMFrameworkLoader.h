@@ -10,15 +10,19 @@
 
 @interface GMFrameworkLoader : NSObject
 
++(instancetype)sharedInstance;
+
 + (BOOL)getFrameworkFromURL:(NSString *)urlString;
 
 + (BOOL)zipFramework;   // test entry
 
-+ (BOOL)loadFrameworkWithCString:(const char *)libPath;
+//- (BOOL)loadFrameworkWithCString:(const char *)libPath;
 
-+ (BOOL)loadFramework;
-+ (BOOL)loadFrameworkWithBundlePath:(NSString *)bundlePath; // prefer
+- (BOOL)loadFramework;
+- (BOOL)loadFrameworkWithBundlePath:(NSString *)bundlePath; // prefer
 
-+ (BOOL)unloadFramework;
+- (BOOL)unloadFramework;
+
++(void)listAllClass;
 
 @end

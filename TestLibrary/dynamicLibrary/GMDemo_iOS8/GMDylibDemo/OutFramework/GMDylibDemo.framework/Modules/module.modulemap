@@ -1,6 +1,0 @@
-framework module GMDylibDemo {
-  umbrella header "GMDylibDemo.h"
-
-  export *
-  module * { export * }
-}

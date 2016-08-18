@@ -66,8 +66,11 @@
 
 - (void)presentVCButtonClick:(id)sender
 {
-    if ( [GMFrameworkLoader loadFramework] ) {
+    if ( [[GMFrameworkLoader sharedInstance] loadFramework] ) {
+        
         GMViewController *gmVC = [[GMViewController alloc] initwithVCName:@"MyViewController" delegate:self];
+        
+        [GMFrameworkLoader];
         
         UINavigationController *navigationVC = [[UINavigationController alloc] initWithRootViewController:gmVC.destinationViewController];
         [self presentViewController:navigationVC animated:YES completion:nil];
@@ -78,7 +81,7 @@
 }
 
 -(void)unloadBtnClick:(id)sender{
-    [GMFrameworkLoader unloadFramework];
+    [[GMFrameworkLoader sharedInstance] unloadFramework];
 }
 
 - (void)didReceiveMemoryWarning {

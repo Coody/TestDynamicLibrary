@@ -10,12 +10,16 @@
 #import <dlfcn.h>
 #import "AFURLSessionManager.h"
 #import "ZipArchive.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 
 
 #define kSTRGMZip       @"GM.zip"
 #define kSTRGMDylibDemoFramework    @"GMDylibDemo.framework"
 
 @interface GMFrameworkLoader()
+@property (nonatomic , assign) CFBundleRef libBundle;
+@property (nonatomic , assign) BOOL isLoad;
 @end
 
 @implementation GMFrameworkLoader
@@ -32,7 +36,11 @@
 }
 
 -(instancetype)init{
-    
+    self = [super init];
+    if ( self ) {
+        _isLoad = NO;
+    }
+    return self;
 }
 
 + (BOOL)getFrameworkFromURL:(NSString *)urlString
@@ -47,7 +55,10 @@
         [[NSFileManager defaultManager] removeItemAtPath:zipFilePath error:&error];
         
         if ( error ) {
-            NSLog(@" remove file error: %@" , error);
+            NSLog(@" Error: remove file error: %@" , error);
+        }
+        else{
+            NSLog(@" Success: remove file success!! ");
         }
     }
     
@@ -75,8 +86,9 @@
             result = NO;
             NSLog(@"Error: %@", error);
         }
-        
-        NSLog(@"File downloaded to: %@", filePath);
+        else{
+            NSLog(@"Success: File downloaded to \"%@\"", filePath);
+        }
         
         [GMFrameworkLoader unzipFramework];
     }];
@@ -89,6 +101,7 @@
 {
     BOOL result = YES;
     
+    /*
     BOOL isDir = YES;
     
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -124,7 +137,7 @@
     
     // test
     [self unzipFramework];
-    
+    */
     return result;
 }
 
@@ -141,83 +154,177 @@
         [[NSFileManager defaultManager] removeItemAtPath:output error:&error];
         
         if ( error ) {
-            NSLog(@" remove file error: %@" , error);
+            NSLog(@"Error: remove file error: %@" , error);
+        }
+        else{
+            NSLog(@"Success: remove files...");
         }
     }
     
     ZipArchive* za = [[ZipArchive alloc] init];
     
-    NSString *unzipMsg = @"解壓縮失敗";
+    NSString *unzipMsg = @"Error: 解壓縮失敗";
     
     if( [za UnzipOpenFile:zipFilePath] ) {
         if( [za UnzipFileTo:output overWrite:YES] == YES ) {
             //unzip data success
             //do something
-            NSLog(@" 解壓縮且覆蓋成功 ");
-            unzipMsg = @"解壓縮且覆蓋成功";
+            NSLog(@"Success: 解壓縮且覆蓋成功 ");
+            unzipMsg = @"Success: 解壓縮且覆蓋成功";
         }
         else{
-            unzipMsg = @"解壓縮但覆蓋檔案失敗";
+            unzipMsg = @"Error: 解壓縮但覆蓋檔案失敗";
         }
         
         [za UnzipCloseFile];
     }
 }
 
-+ (BOOL)loadFrameworkWithCString:(const char *)libPath
-{
-    BOOL result = YES;
-    
-    void* sdl_library = dlopen(libPath, RTLD_LAZY);
-    result = sdl_library != NULL;
-    
-    if (!result){
-        NSLog(@"Failed to load framework: %s, error: %s", libPath, dlerror());
-    }
-    
-    dlclose(sdl_library);
-    
-    return result;
-}
+//- (BOOL)loadFrameworkWithCString:(const char *)libPath
+//{
+//    BOOL result = YES;
+//    
+//    void* sdl_library = dlopen(libPath, RTLD_LAZY);
+//    result = sdl_library != NULL;
+//    
+//    if (!result){
+//        NSLog(@"Error: Failed to load framework: %s, error: %s", libPath, dlerror());
+//    }
+//    
+//    dlclose(sdl_library);
+//    
+//    return result;
+//}
 
-+ (BOOL)loadFramework
+- (BOOL)loadFramework
 {
     return [self loadFrameworkWithBundlePath:kSTRGMDylibDemoFramework];
 }
 
-+ (BOOL)loadFrameworkWithBundlePath:(NSString *)bundlePath
+- (BOOL)loadFrameworkWithBundlePath:(NSString *)bundlePath
 {
     BOOL result = YES;
     
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+#define D_Use_NSBundle_Ver
+#ifdef D_Use_NSBundle_Ver
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:bundlePath] , kSTRGMDylibDemoFramework]];
-    CFBundleRef libBundle = CFBundleCreate(kCFAllocatorDefault, (CFURLRef)url);
+    if ( _isLoad == NO ) {
+        
+        NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
+        NSError *error = nil;
+        NSBundle *bundle = [NSBundle bundleWithURL:url];
+        if ( [bundle loadAndReturnError:&error] ) {
+            NSLog(@"Success: NSBundle load framework success!");
+        }
+        else{
+            NSLog(@"Fail: NSBundle load framework fail.");
+        }
+        
+        _isLoad = YES;
+    }
     
-//    result = CFBundleLoadExecutable(libBundle);
+#else
+    if ( _isLoad == NO ) {
+        NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        
+        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
+        _libBundle = CFBundleCreate(kCFAllocatorDefault, (CFURLRef)url);
+        _isLoad = YES;
+    }
     
     CFErrorRef err;
-    result = CFBundleLoadExecutableAndReturnError(libBundle, &err);
+    //    result = CFBundleLoadExecutable(libBundle);
+    result = CFBundleLoadExecutableAndReturnError(_libBundle, &err);
     
     if (!result){
-        NSLog(@"Failed to load bundle: %@, error: %@", libBundle, err);
+        NSLog(@"Error: Failed to load bundle: %@, error: %@", _libBundle, err);
     }
+#endif
     
     return result;
 }
 
-+ (BOOL)unloadFramework{
-    BOOL result = YES;
+- (BOOL)unloadFramework{
+    BOOL result = NO;
+    
+#ifdef D_Use_NSBundle_Ver
     
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
-    CFBundleRef libBundle = CFBundleCreate(kCFAllocatorDefault, (CFURLRef)url);
+    NSError *error = nil;
+    NSBundle *bundle = [NSBundle bundleWithURL:url];
+    result = [bundle unload];
     
-    CFBundleUnloadExecutable(libBundle);
+#else
+    
+    CFBundleUnloadExecutable(_libBundle);
+    CFRelease(_libBundle);
+    result = YES;
+    
+#endif
+    
+    // 移除檔案
+    [self removeBundleAndZip];
+    _isLoad = NO;
+    
+    NSLog(@"Success: Unload framework.");
     
     return result;
     
+}
+
+-(void)removeBundleAndZip{
+    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSString *zipFilePath = [documentsDirectory stringByAppendingPathComponent:kSTRGMZip];
+    
+    NSString *output = [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework];
+    
+    if ( [[NSFileManager defaultManager] fileExistsAtPath:output] ) {
+        NSError *error = nil;
+        [[NSFileManager defaultManager] removeItemAtPath:output error:&error];
+        
+        if ( error ) {
+            NSLog(@"Error: remove framework error: %@" , error);
+        }
+        else{
+            NSLog(@"Success: remove framework...");
+        }
+    }
+    
+    if ( [[NSFileManager defaultManager] fileExistsAtPath:zipFilePath] ) {
+        NSError *error = nil;
+        [[NSFileManager defaultManager] removeItemAtPath:zipFilePath error:&error];
+        
+        if ( error ) {
+            NSLog(@"Error: remove zip error: %@" , error);
+        }
+        else{
+            NSLog(@"Success: remove zip...");
+        }
+    }
+}
+
++(void)listAllClass{
+    int numClasses;
+    Class * classes = NULL;
+    
+    classes = NULL;
+    numClasses = objc_getClassList(NULL, 0);
+    
+    if (numClasses > 0 )
+    {
+        classes = (__unsafe_unretained Class *)malloc(sizeof(Class) * numClasses);
+        numClasses = objc_getClassList(classes, numClasses);
+        for (int i = 0; i < numClasses; i++) {
+            Class c = classes[i];
+            NSLog(@"%s", class_getName(c));
+        }
+        free(classes);
+    }
 }
 
 @end
