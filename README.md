@@ -14,7 +14,7 @@
 
 # 第 1 階段（2016/07/~ 開始）
 
-1. iOS 的 dynamic library 如何產生？ 參考：[建立動態 library（embedded framework）][] ， [stackoverflow_1][] ， [stackoverflow_2][] ， [stackoverflow_3][] ， [stackoverflow_4][] ，[stackoverflow_5][] ， [iOS8xcode6][]
+1. iOS 的 dynamic library 如何產生？ 參考：[建立動態 library（embedded framework）][] ， [stackoverflow_1][] ， [stackoverflow_2][] ， [stackoverflow_3][] ， [stackoverflow_4][] ，[stackoverflow_5][] ， [iOS8xcode6][] ， [After_2014_WWDC][] ... PS: 內部還可以相關連到很多文章，在這裡不再補連結了。
 2. dynamic library 如何建立並加入專案中？並且可以 work ？
 3. 將 dynamic library 改成下載的方式，並且可以 work ?
 4. 問題確認與解決。
@@ -27,7 +27,7 @@
 [stackoverflow_4]: http://stackoverflow.com/questions/27899799/ios-static-vs-dynamic-frameworks-clarifications
 [stackoverflow_5]: http://stackoverflow.com/questions/27484997/how-to-create-an-umbrella-framework-in-ios-sdk
 [iOS8xcode6]: http://www.insert.io/frameworkios8xcode6/
-PS: 內部還可以相關連到很多文章，在這裡不再補連結了。
+[After_2014_WWDC]: http://foggry.com/blog/2014/06/12/wwdc2014zhi-iosshi-yong-dong-tai-ku/
 
 
 # 第 2 階段（?）
