@@ -50,7 +50,8 @@
 
 - (void)loadDestinationClass
 {
-    Class gmViewController = objc_getClass("MyViewController");
+    Class gmViewController = objc_allocateClassPair(Nil, "MyViewController", 0);
+//    Class gmViewController = objc_getClass("MyViewController");
     
     if (gmViewController) {
         NSLog(@"found MyViewController.");
@@ -92,6 +93,7 @@
 
 -(void)dealloc{
     NSLog(@"dealloc GMViewController");
+    objc_disposeClassPair([destGMViewController class]);
 }
 
 - (UIViewController *)destinationViewController

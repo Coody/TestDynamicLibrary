@@ -203,7 +203,7 @@
 
 - (BOOL)loadFrameworkWithBundlePath:(NSString *)bundlePath
 {
-    BOOL result = YES;
+    BOOL result = NO;
     
 #define D_Use_NSBundle_Ver
 #ifdef D_Use_NSBundle_Ver
@@ -212,17 +212,30 @@
         
         NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         
-        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
-        NSError *error = nil;
-        NSBundle *bundle = [NSBundle bundleWithURL:url];
-        if ( [bundle loadAndReturnError:&error] ) {
-            NSLog(@"Success: NSBundle load framework success!");
+        NSString *documentsPath = [NSString stringWithFormat:@"%@/Documents/%@/%@",NSHomeDirectory() , kSTRGMDylibDemoFramework , kSTRGMDylibDemoFramework];
+        
+//        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
+        
+        if ( [[NSFileManager defaultManager] fileExistsAtPath:documentsPath] ) {
+            NSError *error = nil;
+            NSBundle *bundle = [NSBundle bundleWithPath:documentsPath];
+            if ( [bundle loadAndReturnError:&error] ) {
+                if ( error ) {
+                    NSLog(@"Fail: NSBundle load framework fail.( %@ )" , error.description);
+                }
+                else{
+                    NSLog(@"Success: NSBundle load framework success!");
+                    _isLoad = YES;
+                    result = YES;
+                }
+            }
+            else{
+                NSLog(@"Fail: NSBundle load framework fail.");
+            }
         }
         else{
-            NSLog(@"Fail: NSBundle load framework fail.");
+            NSLog(@"Fail: NSBundle load framework fail.( file not exist )");
         }
-        
-        _isLoad = YES;
     }
     
 #else
@@ -241,6 +254,7 @@
     if (!result){
         NSLog(@"Error: Failed to load bundle: %@, error: %@", _libBundle, err);
     }
+    
 #endif
     
     return result;
@@ -253,9 +267,11 @@
     
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
+    NSString *documentsPath = [NSString stringWithFormat:@"%@/Documents/%@/%@",NSHomeDirectory() , kSTRGMDylibDemoFramework , kSTRGMDylibDemoFramework];
+    
+//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
     NSError *error = nil;
-    NSBundle *bundle = [NSBundle bundleWithURL:url];
+    NSBundle *bundle = [NSBundle bundleWithPath:documentsPath];
     result = [bundle unload];
     
 #else
@@ -270,7 +286,12 @@
     [self removeBundleAndZip];
     _isLoad = NO;
     
-    NSLog(@"Success: Unload framework.");
+    if ( FlushBundleCache(bundle) ) {
+        NSLog(@" ** Success: flush bundle cache SUCCESS ...");
+    }
+    else{
+        NSLog(@" ** Faile: flush bundle cache FAIL! ");
+    }
     
     return result;
     
@@ -325,6 +346,23 @@
         }
         free(classes);
     }
+}
+
+extern void _CFBundleFlushBundleCaches(CFBundleRef bundle) 
+__attribute__((weak_import));
+
+BOOL FlushBundleCache(NSBundle *prefBundle) {
+    // Before calling the function, we need to check if it exists
+    // since it was weak-linked.
+    if (_CFBundleFlushBundleCaches != NULL) {
+        NSLog(@"Flushing bundle cache with _CFBundleFlushBundleCaches");
+        CFBundleRef cfBundle =
+        CFBundleCreate(nil, (CFURLRef)[prefBundle bundleURL]);
+        _CFBundleFlushBundleCaches(cfBundle);
+        CFRelease(cfBundle);
+        return YES; // Success
+    }
+    return NO; // Not available
 }
 
 @end
