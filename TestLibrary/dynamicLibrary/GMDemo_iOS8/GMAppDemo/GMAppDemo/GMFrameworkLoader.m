@@ -210,7 +210,7 @@
     
     if ( _isLoad == NO ) {
         
-        NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//        NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
         
         NSString *documentsPath = [NSString stringWithFormat:@"%@/Documents/%@/%@",NSHomeDirectory() , kSTRGMDylibDemoFramework , kSTRGMDylibDemoFramework];
         
@@ -265,12 +265,11 @@
     
 #ifdef D_Use_NSBundle_Ver
     
-    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//    NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
     NSString *documentsPath = [NSString stringWithFormat:@"%@/Documents/%@/%@",NSHomeDirectory() , kSTRGMDylibDemoFramework , kSTRGMDylibDemoFramework];
     
 //    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
-    NSError *error = nil;
     NSBundle *bundle = [NSBundle bundleWithPath:documentsPath];
     result = [bundle unload];
     

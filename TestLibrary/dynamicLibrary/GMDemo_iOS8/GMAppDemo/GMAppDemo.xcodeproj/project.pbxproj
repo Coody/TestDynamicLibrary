@@ -485,9 +485,9 @@
 				INFOPLIST_FILE = GMAppDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gonline.GMAppDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gonline.GoldCity.InHouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "12c8129e-864f-4a54-924c-14f1f0286eb5";
+				PROVISIONING_PROFILE = "e16af01d-16f0-4c34-9a4f-53f9571813bb";
 			};
 			name = Debug;
 		};
@@ -500,9 +500,9 @@
 				INFOPLIST_FILE = GMAppDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gonline.GMAppDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gonline.GoldCity.InHouse;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "12c8129e-864f-4a54-924c-14f1f0286eb5";
+				PROVISIONING_PROFILE = "f5bddc8c-6136-4b68-9a05-72524dc50a30";
 			};
 			name = Release;
 		};
