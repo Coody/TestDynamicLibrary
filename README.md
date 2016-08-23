@@ -33,15 +33,14 @@
 # 第 2 階段（?）
 
 0. 了解目前 Ooxx 系列專案產生遊戲 .a library 的方式。
-1. Ooxx V1,V2 產生 ooxx 的動態 library 如何產生？
-2. Ooxx V1,V2 可載入動態 library 並且可以 work。
-3. Ooxx V1,V2 可使用下載的方式，下載動態 library 並起可以加入 bundle 、並且可以 work。
-PS: Ooxx 為內部專案，不再詳細寫。
+1. 專案的 ooxx 的動態 library 如何產生？
+2. 專案可載入動態 library 並且可以 work。
+3. 專案可使用下載的方式，下載動態 library 並起可以加入 bundle 、並且可以 work。
 
 
 # 第 3 階段（?）
 
-1. 將 Ooxx 系列專案改成此架構。
+1. 將一系列專案改成此架構。
 2. .....
 3. 
 
