@@ -16,7 +16,7 @@
     NSMutableArray *dataSource;
 }
 
-@property (nonatomic, strong) id<GMDelegate> delegate;
+@property (nonatomic, weak) id<GMDelegate> delegate;
 @property (nonatomic, strong) UITableView *myTableView;
 
 @end
@@ -30,6 +30,7 @@
     self.myTableView = [[UITableView alloc] initWithFrame:self.view.frame];
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
+//    [self.myTableView setBackgroundColor:[UIColor lightGrayColor]];
     [self.view addSubview:self.myTableView];
     
     UIButton *refreshBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -51,7 +52,7 @@
     UIButton *backButton = [UIButton buttonWithType:(UIButtonTypeSystem)];
     [backButton setFrame:CGRectMake(0, 0, 60, 30)];
     backButton.center = CGPointMake(addNewBtn.center.x, addNewBtn.center.y + 80);
-    [backButton setTitle:@"Back 2" forState:(UIControlStateNormal)];
+    [backButton setTitle:@"Back" forState:(UIControlStateNormal)];
     [backButton addTarget:self action:@selector(pressedBackBtn:) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:backButton];
     

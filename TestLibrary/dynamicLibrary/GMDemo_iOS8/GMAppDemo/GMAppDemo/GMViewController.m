@@ -31,7 +31,7 @@
     // 改成由外面先 loadFramework
     [self loadDestinationClass];
     if (delegate){
-        [self setDelegate:delegate];
+//        [self setDelegate:delegate];
     }
     return self;
     
@@ -93,7 +93,6 @@
 
 -(void)dealloc{
     NSLog(@"dealloc GMViewController");
-    objc_disposeClassPair([destGMViewController class]);
 }
 
 - (UIViewController *)destinationViewController

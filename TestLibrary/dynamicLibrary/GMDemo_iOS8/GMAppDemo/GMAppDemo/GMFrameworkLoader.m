@@ -210,15 +210,13 @@
     
     if ( _isLoad == NO ) {
         
-//        NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        
-        NSString *documentsPath = [NSString stringWithFormat:@"%@/Documents/%@/%@",NSHomeDirectory() , kSTRGMDylibDemoFramework , kSTRGMDylibDemoFramework];
-        
-//        NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
+        NSString *documentsPath = [NSString stringWithFormat:@"%@/Documents/%@/%@",NSHomeDirectory() , @"frameworkFolder" , @"myDownloadFramework.framework"];
         
         if ( [[NSFileManager defaultManager] fileExistsAtPath:documentsPath] ) {
+            
             NSError *error = nil;
             NSBundle *bundle = [NSBundle bundleWithPath:documentsPath];
+            
             if ( [bundle loadAndReturnError:&error] ) {
                 if ( error ) {
                     NSLog(@"Fail: NSBundle load framework fail.( %@ )" , error.description);
@@ -271,6 +269,14 @@
     
 //    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@" , [documentsDirectory stringByAppendingPathComponent:kSTRGMDylibDemoFramework] , kSTRGMDylibDemoFramework]];
     NSBundle *bundle = [NSBundle bundleWithPath:documentsPath];
+    
+    if ( FlushBundleCache(bundle) ) {
+        NSLog(@" ** Success: flush bundle cache SUCCESS ...");
+    }
+    else{
+        NSLog(@" ** Faile: flush bundle cache FAIL! ");
+    }
+    
     result = [bundle unload];
     
 #else
@@ -284,13 +290,6 @@
     // 移除檔案
     [self removeBundleAndZip];
     _isLoad = NO;
-    
-    if ( FlushBundleCache(bundle) ) {
-        NSLog(@" ** Success: flush bundle cache SUCCESS ...");
-    }
-    else{
-        NSLog(@" ** Faile: flush bundle cache FAIL! ");
-    }
     
     return result;
     

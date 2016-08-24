@@ -20,8 +20,8 @@
 		686D61B119F6468500AD1FE0 /* DemoUITestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 686D61B019F6468500AD1FE0 /* DemoUITestTests.m */; };
 		686D61BC19F6486500AD1FE0 /* GMDylibDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686D616F19F63B0A00AD1FE0 /* GMDylibDemo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		686D61C119F655E100AD1FE0 /* UIViewController+DelegateSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 686D61BF19F655E100AD1FE0 /* UIViewController+DelegateSetter.h */; };
-		686D61C219F655E100AD1FE0 /* UIViewController+DelegateSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 686D61C019F655E100AD1FE0 /* UIViewController+DelegateSetter.m */; };
 		686D61C619F667F200AD1FE0 /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 686D61C419F667F200AD1FE0 /* ReadMe */; };
+		FB2C911C1D6BFA4600FFE104 /* UIViewController+DelegateSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 686D61C019F655E100AD1FE0 /* UIViewController+DelegateSetter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -413,7 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686D61C219F655E100AD1FE0 /* UIViewController+DelegateSetter.m in Sources */,
+				FB2C911C1D6BFA4600FFE104 /* UIViewController+DelegateSetter.m in Sources */,
 				686D618B19F63C1700AD1FE0 /* MyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
