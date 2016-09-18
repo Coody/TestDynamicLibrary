@@ -32,7 +32,7 @@
 [removeBundleCache_StackOverFlow]: http://stackoverflow.com/questions/13525665/is-there-a-way-to-invalidate-nsbundle-localization-cache-withour-restarting-app
 
 
-# 第 2 階段（2016/08/~ 開始）
+# 第 2 階段（?）
 
 0. 了解目前 Ooxx 系列專案產生遊戲 .a library 的方式。
 1. 專案的 ooxx 的動態 library 如何產生？
