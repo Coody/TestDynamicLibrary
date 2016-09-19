@@ -1,6 +1,7 @@
 # UPDATE (2016/09/19) : BAD NEWS 
 
 iOS 10 已阻擋動態下載並載入 framework....
+因此此研究應該沒辦法繼續下去了...orz
 
 # TestDynamicLibrary
 
