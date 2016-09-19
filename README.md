@@ -1,9 +1,12 @@
+# UPDATE (2016/09/19) : BAD NEWS 
+
+iOS 10 已阻擋動態下載並載入 framework....
+
 # TestDynamicLibrary
 
 1. 用來測試 iOS Dynamic library 的專案集合
 2. 有改寫自別人的專案（底下會附上所有參考的文章與專案出處）
 3. 做記錄用
-
 
 # 第 0 階段（2016/06/27 開始）
 
